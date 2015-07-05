@@ -3,12 +3,11 @@ Yasir Mansoor
 
 This is my take on a REST API, and has the following features:
 
-- JSON router to configure each endpoint with optional security token (time-limited), HTTPS,  allowable actions (PUT, POST, GET, DELETE) and ability to assign additional data parameters (for compounded filters on data result)
+- JSON router to configure each endpoint with optional security token (time-limited), HTTPS,  allowable actions (individually enable PUT, POST, GET or DELETE) and ability to assign additional data parameters (for compounded filters on data result)
 
-- URI santisation. 
+- URI/POST santisation. 
 
-- Easy extensibility by adding an endpoint to the router config, creating an empty child class with the endpoint name, and then 
-creating an associated JSON data file with the same name.
+- Easy extensibility by adding an endpoint to the router config, creating an empty child class with the endpoint name, and then creating an associated JSON data file with the same name.
 
 - Utilises Factory, Singleton and MVC design patterns.
 
