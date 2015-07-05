@@ -1,0 +1,27 @@
+{
+    "100" : {
+        "id": 100,
+        "fullname": "Alpha",
+        "address": "156 Alpha Road"
+    },
+    "101" : {
+        "id": 101,
+        "fullname": "Beta",
+        "address": "251 Beta Road"
+    },
+    "102" : {
+        "id": 102,
+        "fullname": "Charlie",
+        "address": "3 Charlie Road"
+    },
+    "103" : {
+        "id": 103,
+        "fullname": "Delta",
+        "address": "51 Delta Road"
+    },
+    "104" : {
+        "id": 104,
+        "fullname": "Echo",
+        "address": "96 Echo Road"
+    }
+}

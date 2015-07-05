@@ -1,0 +1,18 @@
+{
+    "customers": {
+        "verbs": "GET|POST|PUT|DELETE",
+        "https": false,
+        "security_token": true
+    },
+    "orders": {
+        "verbs": "GET",
+        "https": false,
+        "security_token": true,
+        "optional_params": "customer_id|date"
+    },
+    "config": {
+        "verbs": null,
+        "https": false,
+        "security_token": false
+    }
+}
