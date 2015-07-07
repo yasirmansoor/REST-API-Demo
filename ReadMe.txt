@@ -27,9 +27,11 @@ data file with the same name.
 Usage
 -----
 
-1. Generate security token:
+Endpoints take the following format: /param1/param_1_value/param2/param_2_value/param3/param_3_value
 
-index.php?controller=config&get_security_token=<company_name_here>
+1. Generate security token:
+/controller/config/get_security_token/<company_name_here>
+
 (Company name can be found in Data/consumer_security_keys.json)
 
 Each endpoint URL needs to have the "security_token" and "company_name_here" 
@@ -37,8 +39,8 @@ supplied if the router is configured to enable secrutiy tokens.
 
 2. Customers endpoint:
 
-index.php?controller=customers&format=<json|xml>&id=<id>&security_token=
-<your_security_token>&consumer=<company_name_here>
+/controller/customers/id/<id>/format/<json|xml>/security_token/<your_security_token>/consumer/<company_name_here>
+
 (Customer IDs can be found in Data/customers.json)
 (Data/customers_default.json can be used to reset data by replacing contents 
 in Data/customers.json)
@@ -46,15 +48,13 @@ in Data/customers.json)
 3. Orders endpoint:
 
 a) Get order by ID:
-index.php?controller=orders&format=<json|xml>&id=<customer_id>&security_token=
-<your_security_token>&consumer=<company_name_here>
+/controller/orders/id/<order_id>/format/<json|xml>/security_token/<your_security_token>/consumer/<company_name_here>
 
 b) Get orders by customer ID:
-index.php?controller=orders&format=<json|xml>&customer_id=<customer_id>
-&security_token=<your_security_token>&consumer=<company_name_here>
+/controller/orders/customer_id/<customer_id>/format/<json|xml>/security_token/<your_security_token>/consumer/<company_name_here>
 
 c) Get orders by customer ID and date:
-index.php?controller=orders&format=<json|xml>&customer_id=<customer_id>&date=
-<ddmmyyyy>security_token=<your_security_token>&consumer=<company_name_here>
+/controller/orders/customer_id/<customer_id>/date/<ddmmyyyy>/format/<json|xml>/security_token/<your_security_token>/consumer/<company_name_here>
+
 
 

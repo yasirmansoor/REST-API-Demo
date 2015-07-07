@@ -154,9 +154,9 @@ abstract class BaseController implements BaseContollerInterface {
      */
     public function deleteItem(array $params) {
 
-        if ($this->isIDPassedIn($params)) {
+        if (! $this->isIDPassedIn($params)) {
 
-            $message = $this->type . 'ID was not passed in.';
+            $message = $this->type . ' ID was not passed in.';
             HTTPResponseHeader::generateResponseHeader(HTTPResponseHeader::HTTP_RESOURCE_NOT_FOUND,
                 $message)->quit();
         }

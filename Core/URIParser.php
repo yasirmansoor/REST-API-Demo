@@ -19,11 +19,17 @@ class URIParser {
         if (! $url) {
             $url= $_SERVER['QUERY_STRING'];
         }
-        parse_str($url, $this->uri);
 
-        foreach($this->uri as &$uri) {
-            $uri = $this->library->cleanseURI($uri, null);
+        //parse into key-values pair for each pair of URI params
+        $segments = explode('/', $url);
+        array_shift($segments);
+
+        $length = count($segments);
+        for($i = 0; $i < $length - 1; ++$i) {
+            $this->uri[current($segments)] = $this->library->cleanseURI(next($segments), null);
+            next($segments);
         }
+        unset($segments);
     }
 
     /**
